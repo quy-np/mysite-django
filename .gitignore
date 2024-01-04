@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django
+*.log
+*.pot
+*.pyc
+local_settings.py
+db.sqlite3
+
+# Media
+media/
+
+# Static files
+staticfiles/
+
+# Secret key
+*.secret
+
+# Development/Debugging
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Virtual Environment
+venv/
+venv3/
+
+# Pipenv
+Pipfile
+Pipfile.lock
+
+# Dependency directories
+bin/
+lib/
+include/
