@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    entrypoint: ["./wait.sh"]
+    depends_on: #links:   #depends-on for docker 1.x.x version
+      - db
+    ports:
+      - "8000:8000"
+
+  db:
+    image: mysql:8.2.0
+    ports:
+      - "3306:3306"
+    environment:
+      DB_NAME: test
+      DB_USER: masteradmin 
+      DB_PASSWORD: 12345
+      DB_HOST: 172.17.0.2
+      DB_PORT: 3306
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
