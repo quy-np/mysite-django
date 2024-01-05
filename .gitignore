@@ -47,3 +47,6 @@ Pipfile.lock
 bin/
 lib/
 include/
+
+# Local environment
+env/
